@@ -1,0 +1,30 @@
+# This query retrieves the names, birthplaces, occupations, spouses, and number of children (if greater than 2) of individuals who are human, have an occupation related to acting, were born in New York, and have their name in English
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?name ?birthplace ?occupation ?spouse ?spouse_birthplace ?num_children
+WHERE {
+  ?person wdt:P31 wd:Q5. # instances of human
+  ?person wdt:P106 ?occupation. # occupation of person
+  ?person wdt:P19 ?birthplace. # birthplace of person
+  OPTIONAL {
+    ?person wdt:P26 ?spouse. # spouse of person
+    ?spouse wdt:P19 ?spouse_birthplace. # birthplace of spouse
+  }
+  OPTIONAL {
+    ?person wdt:P40 ?children. # children of person
+    {
+      SELECT (COUNT(?children) AS ?num_children) WHERE {
+        ?person wdt:P40 ?children.
+      }
+    }
+  FILTER(?num_children > 2)
+  }
+  FILTER(lang(?name) = "en")
+  FILTER(CONTAINS(STR(?occupation), "actor"))
+  FILTER(CONTAINS(STR(?birthplace), "New York"))
+}
+ORDER BY ?num_children
+LIMIT 10

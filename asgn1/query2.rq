@@ -1,0 +1,23 @@
+# This query retrieves the names of 10 actors, their movies, and the names of companies for which they were CEO in their lifetime
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?actor ?actorLabel ?movie ?movieLabel ?company ?companyLabel
+WHERE {
+  ?actor wdt:P106/wdt:P279* wd:Q33999. # instance of actor or any subclass of actor
+  ?movie wdt:P31 wd:Q11424. # instance of movie
+  ?movie wdt:P161 ?actor. # actor in movie
+  ?actor wdt:P169*/wdt:P108 ?company. # company CEO in lifetime
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en".
+    ?actor rdfs:label ?actorLabel.
+    ?movie rdfs:label ?movieLabel.
+    ?company rdfs:label ?companyLabel.
+  }
+}
+LIMIT 10
