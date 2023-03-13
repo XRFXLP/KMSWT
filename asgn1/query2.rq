@@ -1,23 +1,16 @@
-# This query retrieves the names of 10 actors, their movies, and the names of companies for which they were CEO in their lifetime
+# This retrieves the names of all people who were born in the same place as Ralph Waldo Emerson (Q48226) and are either philosophers or scientists, filtered by English language labels:
 
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX ps: <http://www.wikidata.org/prop/statement/>
-PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT DISTINCT ?actor ?actorLabel ?movie ?movieLabel ?company ?companyLabel
+SELECT ?name
 WHERE {
-  ?actor wdt:P106/wdt:P279* wd:Q33999. # instance of actor or any subclass of actor
-  ?movie wdt:P31 wd:Q11424. # instance of movie
-  ?movie wdt:P161 ?actor. # actor in movie
-  ?actor wdt:P169*/wdt:P108 ?company. # company CEO in lifetime
-  SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "en".
-    ?actor rdfs:label ?actorLabel.
-    ?movie rdfs:label ?movieLabel.
-    ?company rdfs:label ?companyLabel.
+  {
+    SELECT ?birthplace
+    WHERE {
+      wd:Q48226 wdt:P19 ?birthplace .  
+    }
   }
+  ?person wdt:P19 ?birthplace .
+  ?person wdt:P106 ?occupation .
+  ?person rdfs:label ?name .
+  FILTER(LANG(?name) = "en")        
+  FILTER(?occupation IN (wd:Q901, wd:Q4964182))  # philosopher or scientist
 }
-LIMIT 10

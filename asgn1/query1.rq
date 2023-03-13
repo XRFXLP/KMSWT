@@ -1,30 +1,15 @@
-# This query retrieves the names, birthplaces, occupations, spouses, and number of children (if greater than 2) of individuals who are human, have an occupation related to acting, were born in New York, and have their name in English
+# Returns the names of actors with count of the actors that have appeared in more than christopher nolan movies 
 
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?name ?birthplace ?occupation ?spouse ?spouse_birthplace ?num_children
+SELECT DISTINCT ?actor (COUNT(?film) AS ?numFilms)
 WHERE {
-  ?person wdt:P31 wd:Q5. # instances of human
-  ?person wdt:P106 ?occupation. # occupation of person
-  ?person wdt:P19 ?birthplace. # birthplace of person
-  OPTIONAL {
-    ?person wdt:P26 ?spouse. # spouse of person
-    ?spouse wdt:P19 ?spouse_birthplace. # birthplace of spouse
-  }
-  OPTIONAL {
-    ?person wdt:P40 ?children. # children of person
-    {
-      SELECT (COUNT(?children) AS ?num_children) WHERE {
-        ?person wdt:P40 ?children.
-      }
-    }
-  FILTER(?num_children > 2)
-  }
-  FILTER(lang(?name) = "en")
-  FILTER(CONTAINS(STR(?occupation), "actor"))
-  FILTER(CONTAINS(STR(?birthplace), "New York"))
+  ?film_ wdt:P31 wd:Q11424 .        # find all movies
+  ?film_ wdt:P57 wd:Q25191 .
+  ?film_ wdt:P161 ?actor_ .  
+  ?film_ rdfs:label ?film .
+  ?actor_ rdfs:label ?actor 
+  filter (lang(?film) = "en").  
+  filter (lang(?actor) = "en").  
 }
-ORDER BY ?num_children
-LIMIT 10
+GROUP BY ?actor
+HAVING (1 < ?numFilms)  
+LIMIT 100
