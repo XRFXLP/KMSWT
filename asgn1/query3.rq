@@ -1,0 +1,16 @@
+# List all the brothers in which one brother is a cricketer and another one is an actor 
+
+SELECT DISTINCT ?brother1Label ?brother2Label WHERE {
+  ?brother1 wdt:P3373 ?brother2.
+  {
+    { ?brother1 wdt:P106 wd:Q33999. }
+    UNION
+    { ?brother2 wdt:P106 wd:Q33999. }
+  }
+  {
+    { ?brother1 wdt:P641 wd:Q5372. }
+    UNION
+    { ?brother2 wdt:P641 wd:Q5372. }
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
