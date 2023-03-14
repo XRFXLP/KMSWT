@@ -1,0 +1,18 @@
+# Find all road formula 1 and their locations and distances 
+SELECT ?race ?raceLabel ?location ?locationLabel ?distance
+WHERE {
+  # Filter for formula 1
+  ?race wdt:P31 wd:Q1968 .
+  # Get their locations
+  ?race wdt:P276 ?location .
+  # Get their distances (optional)
+  OPTIONAL { 
+    # Get the distance value and unit
+    ?race p:P2043/psv:P2043 [ wikibase:quantityAmount ?distance; wikibase:quantityUnit wd:Q11573 ] .
+    # Convert meters to kilometers
+    BIND (?distance / 1000 AS ?distance)
+  }
+  
+  # Add labels
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}

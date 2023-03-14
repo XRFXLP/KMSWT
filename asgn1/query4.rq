@@ -1,0 +1,29 @@
+# Find all people who are either astronauts or cosmonauts and their country of citizenship and occupation (optional) and who are from Russia
+SELECT DISTINCT ?personLabel ?countryLabel ?occupationLabel
+WHERE {
+  # Filter for people
+  ?person wdt:P31 wd:Q5 .
+  # Get their country of citizenship
+  ?person wdt:P27 ?country .
+  # Filter for Russia
+  FILTER (?country = wd:Q159)
+  # Get their occupation (either astronaut or cosmonaut)
+  {
+    ?person wdt:P106 wd:Q11631 .
+  } UNION {
+    ?person wdt:P106 wd:Q28648 .
+  }
+  # Get their other occupations (optional)
+  OPTIONAL { 
+    # Filter out astronaut and cosmonaut
+    FILTER NOT EXISTS { 
+      VALUES ?occupation { wd:Q11631 wd:Q28648 }
+      ?person wdt:P106 ?occupation .
+    }
+    # Get any other occupation
+    ?person wdt:P106 ?occupation .
+  }
+  
+  # Add labels
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
