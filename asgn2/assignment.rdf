@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment/"
-     xml:base="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment/"
+<rdf:RDF xmlns="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/tut/"
+     xml:base="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/tut/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -21,6 +21,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasAncestor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasAncestor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasBrother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasBrother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasChild -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasChild"/>
+    
+
+
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFemalePartner -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFemalePartner">
@@ -37,9 +57,61 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMaternalRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMaternalRelationship">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasParent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasAncestor"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPartnership -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPartnership"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPaterrnalRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPaterrnalRelationship">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelatedPartner1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelatedPartner1">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPartnership"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FirstCousin"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#SecondCousin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelatedPartner2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelatedPartner2">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPartnership"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FirstCousin"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#SecondCousin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
     
 
 
@@ -48,6 +120,42 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSex">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSharedGrandParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSharedGrandParent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasAncestor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FirstCousin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSharedGreatGrandParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSharedGreatGrandParent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasAncestor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#SecondCousin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSister">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasUncleOrAunt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasUncleOrAunt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
     </owl:ObjectProperty>
     
 
@@ -108,11 +216,65 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Aunt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Aunt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#BloodRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#BloodRelation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#BloodRelation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Brother -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Brother">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sibling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Duke -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Duke">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Female -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Female">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FemaleAncestor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FemaleAncestor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FemaleDescendant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FemaleDescendant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant"/>
     </owl:Class>
     
 
@@ -125,10 +287,66 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FirstCousin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FirstCousin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#BloodRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#GrandParent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#GrandParent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#GreatGrandFather -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#GreatGrandFather">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#GreatGrandMother -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#GreatGrandMother">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#GreatGrandParent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#GreatGrandParent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Male -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Male">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MaleAncestor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MaleAncestor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MaleDescendant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MaleDescendant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#AncestorDescendant"/>
     </owl:Class>
     
 
@@ -155,9 +373,57 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MaternalAunt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MaternalAunt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Aunt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MaternalUncle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MaternalUncle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Uncle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PaternalAunt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PaternalAunt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Aunt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PaternalUncle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PaternalUncle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Uncle"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Prince -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Prince">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Princess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Princess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:Class>
     
 
 
@@ -167,9 +433,41 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#SecondCousin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#SecondCousin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#BloodRelation"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sibling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sibling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#BloodRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sister -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sister">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sibling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Uncle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Uncle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#BloodRelation"/>
+    </owl:Class>
 </rdf:RDF>
 
 
