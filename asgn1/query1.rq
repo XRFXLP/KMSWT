@@ -7,8 +7,8 @@ WHERE {
   ?film_ wdt:P161 ?actor_ .  
   ?film_ rdfs:label ?film .
   ?actor_ rdfs:label ?actor 
-  filter (lang(?film) = "en").  
-  filter (lang(?actor) = "en").  
+  filter (lang(?film) = "en") .  
+  filter (lang(?actor) = "en") .  
 }
 GROUP BY ?actor
 HAVING (1 < ?numFilms)  
