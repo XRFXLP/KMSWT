@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment/"
+     xml:base="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFemalePartner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFemalePartner">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPartnership"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMalePartner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMalePartner">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPartnership"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPartnership -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPartnership"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSex -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSex">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasBirthYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasBirthYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasEventYear"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasDeathYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasDeathYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasEventYear"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasEventYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasEventYear">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMarriageYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMarriageYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasEventYear"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MarriageEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Female">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FemalePartner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#FemalePartner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Male">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MalePartner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MalePartner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Marriage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Marriage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MarriageEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MarriageEvent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Relation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Relation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
