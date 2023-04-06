@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:kmwst-assignment="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment"/>
     
 
@@ -35,9 +36,19 @@
     
 
 
-    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasChild -->
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFamilyName -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasChild"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFamilyName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFather -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFather">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
+    </owl:ObjectProperty>
     
 
 
@@ -45,6 +56,14 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFemalePartner">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasPartnership"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
     </owl:ObjectProperty>
     
 
@@ -60,6 +79,14 @@
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMaternalRelationship -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMaternalRelationship">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMother">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
     </owl:ObjectProperty>
     
@@ -118,6 +145,7 @@
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSex -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSex">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
     </owl:ObjectProperty>
@@ -160,6 +188,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#isFatherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#isFatherOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#isMotherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#isMotherOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -187,10 +231,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasDivorceYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasDivorceYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasEventYear"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#MarriageEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasEventYear -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasEventYear">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
@@ -359,6 +413,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSex"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Male"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Marriage -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Marriage">
@@ -407,7 +479,15 @@
 
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSex"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sex"/>
+    </owl:Class>
     
 
 
@@ -468,6 +548,261 @@
     <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Uncle">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#BloodRelation"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasSex"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Female"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Andrew -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Andrew">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Anne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Anne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Autumn_Philips -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Autumn_Philips">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Beatrice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Beatrice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Camilla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Camilla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Captain_Mark_Philips -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Captain_Mark_Philips">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Charles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Charles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Charlotte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Charlotte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Diana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Diana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Edward -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Edward">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Eugenie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Eugenie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#George -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#George">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Harry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Harry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Isla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Isla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#James -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#James">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Kate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Kate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Louise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Louise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Mia_Grace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Mia_Grace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Mike_Tindall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Mike_Tindall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Peter_Phillips -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Peter_Phillips">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PrincePhilip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PrincePhilip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Queen_Elizabeth_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Queen_Elizabeth_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+        <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1926</kmwst-assignment:hasBirthYear>
+        <kmwst-assignment:hasDeathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</kmwst-assignment:hasDeathYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sarah -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sarah">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Savannah -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Savannah">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sophie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sophie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Timothy_Lawrence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Timothy_Lawrence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#William -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#William">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Zara_Tindall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Zara_Tindall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
