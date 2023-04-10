@@ -534,6 +534,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFamilyName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasFamilyName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenFirstName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenLastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenLastName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasGivenName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasName"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMarriageYear -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasMarriageYear">
@@ -541,6 +573,15 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Marriage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
     </owl:DatatypeProperty>
     
 
@@ -857,6 +898,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Andrew">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Prince"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1960</kmwst-assignment:hasBirthYear>
+        <kmwst-assignment:hasFamilyName>Windsor</kmwst-assignment:hasFamilyName>
+        <kmwst-assignment:hasGivenFirstName>Andrew</kmwst-assignment:hasGivenFirstName>
+        <kmwst-assignment:hasGivenLastName>Mountbatten-Windsor</kmwst-assignment:hasGivenLastName>
     </owl:NamedIndividual>
     
 
@@ -866,6 +910,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Anne">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Princess"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1950</kmwst-assignment:hasBirthYear>
+        <kmwst-assignment:hasFamilyName>Windsor</kmwst-assignment:hasFamilyName>
+        <kmwst-assignment:hasGivenFirstName>Anne</kmwst-assignment:hasGivenFirstName>
+        <kmwst-assignment:hasGivenLastName>Mountbatten-Windsor</kmwst-assignment:hasGivenLastName>
     </owl:NamedIndividual>
     
 
