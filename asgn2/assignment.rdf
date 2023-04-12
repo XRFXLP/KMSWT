@@ -922,6 +922,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Andrew">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Prince"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PrincePhilip"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Queen_Elizabeth_II"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1960</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasFamilyName>Windsor</kmwst-assignment:hasFamilyName>
         <kmwst-assignment:hasGivenFirstName>Andrew</kmwst-assignment:hasGivenFirstName>
@@ -934,6 +936,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Anne">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Princess"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PrincePhilip"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Queen_Elizabeth_II"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1950</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasFamilyName>Windsor</kmwst-assignment:hasFamilyName>
         <kmwst-assignment:hasGivenFirstName>Anne</kmwst-assignment:hasGivenFirstName>
@@ -993,6 +997,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Beatrice">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Princess"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Andrew"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sarah"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1988</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasFamilyName>Mountbatten-Windsor</kmwst-assignment:hasFamilyName>
         <kmwst-assignment:hasGivenFirstName>Beatrice</kmwst-assignment:hasGivenFirstName>
@@ -1040,6 +1046,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Charles">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#King"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PrincePhilip"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Queen_Elizabeth_II"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1948</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>Charles</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
@@ -1050,6 +1058,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Charlotte">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Princess"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#William"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Kate"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2015</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>Charlotte</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
@@ -1083,6 +1093,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Edward">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Duke"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#PrincePhilip"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Queen_Elizabeth_II"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1964</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>Edward</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
@@ -1114,6 +1126,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#George">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Prince"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#William"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Kate"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>George</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
@@ -1124,6 +1138,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Harry">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Duke"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Charles"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Diana"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1984</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>Harry</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
@@ -1134,6 +1150,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Isla">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Peter_Phillips"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Autumn_Philips"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>Isla</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
@@ -1144,6 +1162,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#James">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Earl"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Edward"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sophie"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>James</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
@@ -1177,6 +1197,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Louise">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Edward"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Sophie"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2003</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>Louise</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
@@ -1187,6 +1209,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Mia_Grace">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Mike_Tindall"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Zara_Tindall"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>Mia</kmwst-assignment:hasGivenFirstName>
         <kmwst-assignment:hasGivenLastName>Grace</kmwst-assignment:hasGivenLastName>
@@ -1210,6 +1234,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Peter_Phillips">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Man"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Captain_Mark_Philips"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Anne"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1977</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasFamilyName>Windsor</kmwst-assignment:hasFamilyName>
         <kmwst-assignment:hasGivenFirstName>Peter</kmwst-assignment:hasGivenFirstName>
@@ -1271,6 +1297,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Savannah">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Peter_Phillips"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Autumn_Philips"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2010</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>Savannah</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
@@ -1312,6 +1340,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#William">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Prince"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Charles"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Diana"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1982</kmwst-assignment:hasBirthYear>
     </owl:NamedIndividual>
     
@@ -1321,6 +1351,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Zara_Tindall">
         <rdf:type rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Woman"/>
+        <kmwst-assignment:hasFather rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Captain_Mark_Philips"/>
+        <kmwst-assignment:hasMother rdf:resource="http://www.semanticweb.org/xrfxlp/ontologies/2023/3/kmwst-assignment#Anne"/>
         <kmwst-assignment:hasBirthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1981</kmwst-assignment:hasBirthYear>
         <kmwst-assignment:hasGivenFirstName>Zara</kmwst-assignment:hasGivenFirstName>
     </owl:NamedIndividual>
