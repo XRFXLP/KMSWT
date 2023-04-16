@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "WikipediaVisualizer",
+    "version": "1.0",
+    "content_scripts" : [
+    {
+        "matches" : [
+            "<all_urls>"
+        ],
+        "js" : ["content.js", "vis-network.js"]
+    }  
+    ],
+    "background": {
+        "page": "background.html"
+    },
+    "permissions": [
+        "history", "tabs"
+    ]
+}
