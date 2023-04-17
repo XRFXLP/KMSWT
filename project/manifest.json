@@ -5,15 +5,10 @@
     "content_scripts" : [
     {
         "matches" : [
-            "<all_urls>"
+            "https://en.wikipedia.org/wiki/*"            
         ],
         "js" : ["content.js", "vis-network.js"]
     }  
     ],
-    "background": {
-        "page": "background.html"
-    },
-    "permissions": [
-        "history", "tabs"
-    ]
+    "permissions": ["<all_urls>"]
 }
