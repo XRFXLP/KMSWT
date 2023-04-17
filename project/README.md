@@ -1,3 +1,3 @@
 ![X][def]
 
-[def]: image.png
+[def]: ss1.png
