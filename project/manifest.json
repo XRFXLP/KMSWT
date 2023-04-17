@@ -10,8 +10,11 @@
         "js" : ["content.js", "vis-network.js"]
     }  
     ],
-    "background": {
-        "page": "background.html"
+    "browser_action": {
+        "default_popup": "popup.html"
     },
-    "permissions": ["<all_urls>"]
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": ["<all_urls>", "tabs", "background"]
 }

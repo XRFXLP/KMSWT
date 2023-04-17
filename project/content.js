@@ -3,19 +3,26 @@ const URLPrefix = 'https://www.wikidata.org/wiki/Special:EntityPage'
 let wikidataID = null;
 // let container = document.getElementById('mynetwork');
 
-//Add button for visualizing
-let button = document.createElement('button')
-button.innerText = "Visualize"
-button.style.backgroundColor = '#111150';
-button.style.border = 'none';
-button.style.color = 'white';
-button.style.padding = '10px 28px';
-button.style.textAlign = 'center';
-button.style.textDecoration = 'none';
-button.style.display = 'inline-block';
-button.style.fontSize = '14px';
-button.style.margin = '4px 2px';
-button.style.cursor = 'pointer';
+// Add button for visualizing
+// let button = document.createElement('button')
+// button.innerText = "Visualize"
+// button.style.backgroundColor = '#111150';
+// button.style.border = 'none';
+// button.style.color = 'white';
+// button.style.padding = '10px 28px';
+// button.style.textAlign = 'center';
+// button.style.textDecoration = 'none';
+// button.style.display = 'inline-block';
+// button.style.fontSize = '14px';
+// button.style.margin = '4px 2px';
+// button.style.cursor = 'pointer';
+
+// button.addEventListener('click', function() {
+//   chrome.runtime.sendMessage({greeting: 'openPopup', action: 'openPopup'});
+//   console.log("button clicked");
+// });
+
+
 let div = document.createElement("div")
 div.appendChild(button)
 document.getElementById('firstHeading').appendChild(div )
@@ -29,6 +36,15 @@ for(let urlElement of document.links){
 }
 
 const wikidataURL = `https://www.wikidata.org/wiki/${wikidataID}`
+
+chrome.runtime.onMessage.addListener(receiver);
+
+// Handle the message
+function receiver(request, sender, sendResponse) {
+  if (request.message === "browser action") {    
+    
+  }
+}
 
 fetch(wikidataURL)
   .then(response => response.text())
