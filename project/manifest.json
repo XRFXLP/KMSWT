@@ -10,5 +10,8 @@
         "js" : ["content.js", "vis-network.js"]
     }  
     ],
+    "background": {
+        "page": "background.html"
+    },
     "permissions": ["<all_urls>"]
 }
